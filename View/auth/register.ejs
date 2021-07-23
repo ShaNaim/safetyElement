@@ -1,0 +1,147 @@
+<div class="body p-5 mt-2 container-fluid">
+  <h3 class="text-dark pb-2">Sign Up Form</h3>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label class="" for="exampleInputEmail1">Email address</label>
+          <input
+            type="text"
+            name="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            required
+          />
+          <div name="emailError" class="email error text-danger"></div>
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+
+        <div class="form-group col-md-6">
+          <label class="" for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            required
+          />
+          <div name="passwordError" class="password error text-danger"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label class="">First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            class="form-control"
+            id="firstName"
+            aria-describedby="emailHelp"
+            placeholder="First Name"
+            required
+          />
+          <div name="firstNameError" class="firstName error text-danger"></div>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label class="">Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            class="form-control"
+            id="lastName"
+            aria-describedby="emailHelp"
+            placeholder="last Name"
+          />
+          <small id="emailHelp" class="form-text text-muted">Optional</small>
+          <div name="lastNameError" class="lastName error text-danger"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-5">
+          <label class="" for="exampleInputEmail1">Phone Number</label>
+          <input
+            type="number"
+            name="contact"
+            class="form-control mb-3"
+            id="contact"
+            aria-describedby="emailHelp"
+            placeholder="+880"
+            required
+          />
+          <div name="nameError" class="contact error text-danger"></div>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label class="" for="exampleInputEmail1">Date of Birth</label>
+          <input
+            type="date"
+            name="dob"
+            class="form-control mb-3"
+            id="dob"
+            required
+          />
+          <div name="nameError" class="dob error text-danger"></div>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label class="" for="inputState">Gender</label>
+          <select name="gender" id="inputState" class="form-control">
+            <option selected>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+          <div name="genderError" class="gender error text-danger"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label class="" for="inputState">City</label>
+          <select name="city" id="inputState" class="form-control">
+            <% location.cities.forEach(element => { %>
+            <option><%= element %></option>
+            <% }) %>
+          </select>
+          <div name="genderError" class="gender error text-danger"></div>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label class="" for="inputAddress2">Area</label>
+          <input
+            type="text"
+            name="area"
+            class="form-control"
+            id="inputAddress2"
+            placeholder="Street Name/Number"
+          />
+        </div>
+
+        <div class="form-group col-md-3">
+          <label class="house" for="inputAddress2">Street ,House/Flat</label>
+          <input
+            name="house"
+            type="text"
+            class="form-control"
+            id="inputAddress2"
+            placeholder="House/floor"
+          />
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="inputZip">Zip</label>
+          <input name="zip" type="text" class="form-control" id="inputZip" />
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-info mt-3">Sign Up</button>
+    </form>
+  </div>
+</div>
+<script src="js/register.js"></script>

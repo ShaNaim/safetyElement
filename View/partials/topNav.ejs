@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light pr-5 pl-5 mb-1" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="/"><h2>SafetyElement</h2></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+    <div class="navbar-nav row-cols-lg-1">
+      <div class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </div>
+      <a class="nav-item nav-link <% if (title == "Home") { %> active  <% } %>" href="/" >Home</a>
+      <% if (user) { %>
+          <a class="nav-item nav-link <% if (title == "Orders") { %> active  <% } %>" href="">Orders</a>
+          <a class="nav-item nav-link <% if (title == "Logout") { %> active  <% } %>" href="/logout">Logout</a>
+          <a class="nav-item nav-link <% if (title == "DashBoard") { %> active  <% } %>" href="/dashboard" >Welcome , <%= user.firstName %> </a>
+      <% } else { %>
+        <a class="nav-item nav-link <% if (title == "About") { %> active  <% } %>" href="/about" ><i class="fas fa-shopping-cart ml-1"></i><span class="ml-2">Cart</span></a>
+        <a class="nav-item nav-link <% if (title == "Register") { %> active  <% } %>" href="/register">Register</a>
+        
+        <a class="nav-item nav-link <% if (title == "Login") { %> active  <% } %>" href="/login">Login</a>
+      <% } %>
+    </div>
+  </div>
+</nav>
+
+
+
+
