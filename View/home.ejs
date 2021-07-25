@@ -13,8 +13,8 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
-    <div style="max-height: 600px" class="carousel-inner">
-      <div style="max-height: 600px" class="carousel-item active">
+    <div style="max-height: 500px" class="carousel-inner">
+      <div style="max-height: 500px" class="carousel-item active">
         <img
           class="d-block w-100"
           src="images/carasol3.jpg"
@@ -60,9 +60,9 @@
 <div class="allProduct">
   <div style="text-align: center">Something Else</div>
   <div style="padding: 15px" class="row">
-    <% product.forEach(product => { %>
-    <div class="column">
-      <%- include("./product/productCard.ejs",{data : product}) %>
+    <% product.forEach(data => { %>
+    <div class="column cardBody">
+      <%- include("./product/productCard.ejs",{product : data}) %>
     </div>
     <% }) %>
   </div>

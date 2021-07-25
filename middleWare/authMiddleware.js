@@ -13,12 +13,10 @@ const requireAuth = (req, res, next) => {
         //next();
       } else {
         // ****check User Exists****
-        console.log(decodedToken);
         next();
       }
     });
-  }
-  res.redirect("/login");
+  } else return res.redirect("/login");
 };
 
 const checkUser = (req, res, next) => {

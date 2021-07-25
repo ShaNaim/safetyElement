@@ -124,7 +124,6 @@ module.exports.userLogin = async (req, res) => {
     const user = await User.login(email, password);
     if (user) {
       // Create JWT token
-      console.log("print in COntroller :", user.id);
       const token = createJWT(user.id);
       // set cookie
       res.cookie("jwt", token, {

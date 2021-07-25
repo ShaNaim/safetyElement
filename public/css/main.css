@@ -14,10 +14,17 @@ body {
 /* Style the counter cards */
 .card {
   box-shadow: 8px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   max-width: 300px;
   margin: auto;
   text-align: center;
   font-family: arial;
+}
+
+.cardBody * :hover {
+  box-shadow: 10px 10px 10px 0 rgba(14, 2, 3, 0.2);
+  border: 5px solid rgba(255, 255, 255, 0.308);
 }
 
 .price {
@@ -26,6 +33,7 @@ body {
 }
 
 .card button {
+  border-radius: 25px;
   border: none;
   outline: 0;
   padding: 12px;
@@ -64,6 +72,16 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+.appfooter {
+  left: 0;
+  bottom: 0;
+  margin-top: -50px;
+  width: 100%;
+  background-color: rgb(21, 23, 26);
+  color: white;
+  text-align: center;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */

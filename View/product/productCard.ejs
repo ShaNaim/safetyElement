@@ -1,9 +1,9 @@
 <div class="card">
-  <a href="/register"
-    ><img src="<%= data.img %>" alt="Denim Jeans" style="width: 100%" />
-    <h3><%= data.Name %></h3>
-    <p class="price"><%= data.Price %></p>
-    <p><%= data.Discription %></p></a
+  <a href="/product?id=<%= product.id %>"
+    ><img src="<%= product.img %>" alt="Denim Jeans" style="width: 100%" />
+    <h3><%= product.Name %></h3>
+    <p class="price"><%= product.Price %></p>
+    <p><%= product.Discription %></p></a
   >
 
   <p><button>Buy Now</button></p>

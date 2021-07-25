@@ -66,7 +66,7 @@ app.use(checkUser);
 //Routes
 app.use(homeRouter);
 app.use(authRouter);
-// app.use(productRouter);
+app.use(productRouter);
+app.use(userRouter);
 // app.use("/admin", adminRouter);
-// app.use("/user", userRouter);
 // app.use(errorRouter);
